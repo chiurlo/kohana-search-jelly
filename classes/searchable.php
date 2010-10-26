@@ -9,12 +9,12 @@ abstract class Kohana_Jelly_Searchable extends Jelly {
 
 	public function get_type()
 	{
-		return $this->object_name();
+		return $this->_meta->model();
 	}
 
 	public function get_unique_identifier()
 	{
-		return $this->object_name().'_'.$this->get_identifier();
+		return $this->_meta->model().'_'.$this->get_identifier();
 	}
 
 }
